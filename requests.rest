@@ -1,0 +1,40 @@
+get http://localhost:4000/
+
+###
+
+get http://localhost:4000/api/accounts
+
+###
+
+get http://localhost:4000/api/accounts/1
+
+###
+
+post http://localhost:4000/api/accounts
+content-type: application/json
+
+{
+  "VIN": "Wimpy",
+  "make": 2.00,
+  "model": "",
+  "mileage": "",
+  "transmission": "",
+  "title": ""
+}
+
+###
+
+put http://localhost:4000/api/accounts/15
+content-type: application/json
+
+{
+  "name": "Dr. Evil",
+  "budget": 1000000.00
+}
+
+###
+
+delete http://localhost:4000/api/accounts/16
+
+### Stretch test (query)
+get http://localhost:4000/api/accounts/?sortby=budget&limit=5&sortdir=desc
