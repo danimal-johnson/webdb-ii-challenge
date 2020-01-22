@@ -1,40 +1,40 @@
+### Check server status
 get http://localhost:4000/
 
-###
+### Unimplemented stretch goal: expect error 501
+get http://localhost:4000/api/sales
 
-get http://localhost:4000/api/accounts
+### Get list of all cars
+get http://localhost:4000/api/cars
 
-###
+### Get specific car
+get http://localhost:4000/api/cars/5
 
-get http://localhost:4000/api/accounts/1
-
-###
-
-post http://localhost:4000/api/accounts
+### Add a car
+post http://localhost:4000/api/cars
 content-type: application/json
 
 {
-  "VIN": "Wimpy",
-  "make": 2.00,
-  "model": "",
-  "mileage": "",
+  "VIN": "KEV7BRC715KWK23",
+  "make": "Mazda",
+  "model": "Miata",
+  "mileage": "2201",
   "transmission": "",
   "title": ""
 }
 
-###
-
-put http://localhost:4000/api/accounts/15
+### Modify a car
+put http://localhost:4000/api/cars/15
 content-type: application/json
 
 {
-  "name": "Dr. Evil",
-  "budget": 1000000.00
+  "VIN": "WKV5BDC725KWK66",
+  "make": "Mazda",
+  "model": "Miata",
+  "mileage": "2201",
+  "transmission": "",
+  "title": ""
 }
 
-###
-
-delete http://localhost:4000/api/accounts/16
-
-### Stretch test (query)
-get http://localhost:4000/api/accounts/?sortby=budget&limit=5&sortdir=desc
+### Delete a car
+delete http://localhost:4000/api/cars/16
