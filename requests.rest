@@ -8,7 +8,7 @@ get http://localhost:4000/api/sales
 get http://localhost:4000/api/cars
 
 ### Get specific car
-get http://localhost:4000/api/cars/5
+get http://localhost:4000/api/cars/4
 
 ### Add a car
 post http://localhost:4000/api/cars
@@ -20,21 +20,21 @@ content-type: application/json
   "model": "Miata",
   "mileage": "2201",
   "transmission": "",
-  "title": ""
+  "title_status": ""
 }
 
 ### Modify a car
-put http://localhost:4000/api/cars/15
+put http://localhost:4000/api/cars/4
 content-type: application/json
 
 {
   "VIN": "WKV5BDC725KWK66",
   "make": "Mazda",
   "model": "Miata",
-  "mileage": "2201",
+  "mileage": "2202",
   "transmission": "",
-  "title": ""
+  "title_status": ""
 }
 
 ### Delete a car
-delete http://localhost:4000/api/cars/16
+delete http://localhost:4000/api/cars/4
